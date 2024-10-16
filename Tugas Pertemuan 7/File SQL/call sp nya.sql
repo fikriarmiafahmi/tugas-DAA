@@ -81,13 +81,8 @@ SET kwitansi = (SELECT nomor_kuitansi FROM kwitansi LIMIT 1);
 
 CALL tampilkan_data_calon_siswa();
 
-
 -- Sistem dapat membuat Laporan Pembayaran dengan data dan informasi pada kolom sesuai yang dibutuhkan,
 CALL buat_laporan ("2024-10-10", 291, "Fikri");
 
 -- maka buat query untuk menampilkan Laporan ini sesuai pilihan periode tanggal 
 CALL tampilkan_laporan("2024-10-10");
-
-
-
-
