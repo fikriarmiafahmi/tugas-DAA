@@ -1,3 +1,7 @@
+-- Nama Aggota Kelompok:
+-- Fikri Armia Fahmi (2023071018)
+-- Dava Ferdian Hadiputra (2023071021)
+
 -- UPDATE VIEW
 CREATE OR REPLACE VIEW nama_and_status AS
 SELECT nama, ktp, status_siswa
