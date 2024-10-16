@@ -2,22 +2,6 @@
 -- Fikri Armia Fahmi (2023071018)
 -- Dava Ferdian Hadiputra (2023071021)
 
-SHOW TABLES;
-DROP PROCEDURE IF EXISTS insert_data_siswa;
--- DROP PROCEDURE IF EXISTS lihat_formulir;
--- DROP PROCEDURE IF EXISTS cek_ktp;
--- DROP PROCEDURE IF EXISTS insert_no_pendaftaran;
--- DROP PROCEDURE IF EXISTS bank_melihat_status;
--- DROP PROCEDURE IF EXISTS bayar;
--- DROP PROCEDURE IF EXISTS kirim_ke_bank;
--- DROP PROCEDURE IF EXISTS siswa_lihat_status_pembayaran;
--- DROP PROCEDURE IF EXISTS tampilkan_data_calon_siswa;
--- DROP PROCEDURE IF EXISTS buat_laporan;
--- DROP PROCEDURE IF EXISTS tampilkan_laporan;
--- DROP PROCEDURE IF EXISTS formulir_pendaftaran;
--- DROP PROCEDURE IF EXISTS formulir_pembayaran;
-
-
 DELIMITER //
 
 -- SP INSERT DATA SISWA
@@ -164,9 +148,4 @@ BEGIN
     VALUES (sp_no_pendaftaran, sp_nama, sp_status_pembayaran);
 END //
 
-
--- SP UNTUK MENGIRIM DATA SISWA KE KEPALA SEKOLAH
--- SP UNTUK MENGIRIM DATA SISWA KE YAYASAN SEKOLAH
--- SP UNTUK UPDATE STATUS PEMBAYARAN
--- SP UNTUK 
 DELIMITER ;
