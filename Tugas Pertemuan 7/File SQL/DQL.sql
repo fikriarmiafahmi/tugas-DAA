@@ -1,3 +1,7 @@
+-- Nama Aggota Kelompok:
+-- Fikri Armia Fahmi (2023071018)
+-- Dava Ferdian Hadiputra (2023071021)
+
 -- TAMPILKAN TABLE
 SELECT * FROM formulir_pendaftaran;
 SELECT * FROM data_siswa;
