@@ -2,16 +2,9 @@
 -- Fikri Armia Fahmi (2023071018)
 -- Dava Ferdian Hadiputra (2023071021)
 
--- UPDATE VIEW
-CREATE OR REPLACE VIEW nama_and_status AS
-SELECT nama, ktp, status_siswa
-FROM data_siswa
-WHERE status_siswa = "Belum Terdaftar";
-
 -- INSERT DATA SISWA
-
 INSERT INTO data_siswa (nama, ktp, gender, tgl_lahir, alamat, status_siswa)
-VALUES ("Armia", "2338275348273654", "Laki-laki", "2002-12-1", "Ds. Penusupan", "Belum Terdaftar");
+VALUES ("Armia", "2338275348273654", "Laki-laki", "2002-12-01", "Ds. Penusupan", "Belum Terdaftar");
 
 CALL insert_data_siswa (
 	"Fikri",
@@ -37,5 +30,16 @@ UPDATE data_calon_siswa
 SET status_pembayaran = TRUE
 WHERE no_pendaftaran = 364;
 
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM data_siswa
+WHERE nama = "Fikri";
+
 DELETE FROM data_calon_siswa
-WHERE no_pendaftaran = 364;
+WHERE nama = "Armia";
+
+-- UPDATE VIEW
+CREATE OR REPLACE VIEW nama_and_status AS
+SELECT nama, ktp, status_siswa
+FROM data_siswa
+WHERE status_siswa = "Belum Terdaftar";
