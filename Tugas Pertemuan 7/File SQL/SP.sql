@@ -36,7 +36,6 @@ BEGIN
 	WHERE status_siswa = "Terdaftar";
 END //
 
-
 -- SP UNTUK BANK MELIHAT STATUS PEMBAYARAN
 CREATE PROCEDURE bank_melihat_status ()
 BEGIN
@@ -55,9 +54,8 @@ END //
 CREATE PROCEDURE kirim_ke_bank (IN sp_no_pendaftaran INT)
 BEGIN
 	INSERT INTO bank (no_pendaftaran, nama, status_pembayaran)
-    SELECT sp_no_pendaftaran, nama, status_pembayaran
+    SELECT no_pendaftaran, nama, status_pembayaran
     FROM data_calon_siswa;
-    SELECT *  FROM bank;
 END //
 
 -- SP UNTUK UPDATE STATUS PEMBAYARAN MENJADI "BAYAR"
@@ -70,14 +68,12 @@ BEGIN
     WHERE no_pendaftaran = sp_no_pendaftaran;
 END //
 
-
 -- SP MENGINSERT NILAI TEST
 CREATE PROCEDURE insert_nilai (IN sp_no_pendaftaran INT, IN sp_nama VARCHAR(100), IN sp_nilai DECIMAL(5,2))
 BEGIN
 	INSERT INTO hasil_test (no_pendaftaran, nama, nilai)
     VALUES (sp_no_pendaftaran, sp_nama, sp_nilai);
 END //
-
 
 -- SP SISWA MELIHAT HASIL TEST
 CREATE PROCEDURE lihat_hasil (IN sp_no_pendaftaran INT)
@@ -86,14 +82,12 @@ BEGIN
     WHERE no_pendaftaran = sp_no_pendaftaran;
 END //
 
-
 -- SP SISWA MELIHAT STATUS PEMBAYARAN
 CREATE PROCEDURE siswa_lihat_status_pembayaran (IN sp_no_pendaftaran INT)
 BEGIN
 	SELECT no_pendaftaran, nama, status_pembayaran FROM data_calon_siswa
     WHERE no_pendaftaran = sp_no_pendaftaran;
 END //
-
 
 -- SP MEMBUAT KWITANSI
 CREATE PROCEDURE kwitansi (IN sp_no_pendaftaran INT)
