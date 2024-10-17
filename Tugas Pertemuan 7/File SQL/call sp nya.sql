@@ -28,11 +28,9 @@ CALL lihat_formulir();
 CALL cek_ktp("1234567890123456");
 
 -- JIKA BELUM, MAKA INSERT NOMOR PENDAFTARAN
--- generate nomor random
-SET @random_number = FLOOR(100 + (RAND() * 900));
 
 CALL insert_no_pendaftaran(
-	@random_number,
+	291,
 	"Fikri",
     "1234567890123456",
     "Laki-laki",
